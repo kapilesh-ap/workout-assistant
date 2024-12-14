@@ -9,9 +9,3 @@ A web application that performs real-time pose detection using both 2D and 3D mo
 - User-friendly landing page interface
 - Backend API support for pose analysis
 
-## Project Structure
-
-```
-├── frontend/
-│   └── src/
-│
