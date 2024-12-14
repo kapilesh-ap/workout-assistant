@@ -1,0 +1,131 @@
+:root {
+    --primary-purple: #8A2BE2;
+    --neon-green: #50fa7b;
+    --dark-bg: #0a0a0a;
+  }
+  
+  .landing-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-bg);
+    overflow: hidden;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .highlight {
+    color: var(--primary-purple);
+    text-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+  }
+  
+  .start-button {
+    position: relative;
+    padding: 1rem 3rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    color: white;
+    background: var(--neon-green);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .start-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(80, 250, 123, 0.5);
+  }
+  
+  .button-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(80, 250, 123, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .start-button:hover .button-glow {
+    opacity: 1;
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+      rgba(138, 43, 226, 0.2) 0%,
+      rgba(10, 10, 10, 0.8) 70%
+    );
+    z-index: 1;
+  }
+  
+  .animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+      transparent 0%,
+      rgba(138, 43, 226, 0.1) 50%,
+      transparent 100%
+    );
+    animation: shimmer 8s infinite linear;
+    z-index: 1;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .content {
+      padding: 0 1rem;
+    }
+    
+    .start-button {
+      padding: 0.8rem 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2.5rem;
+    }
+    
+    .start-button {
+      padding: 0.7rem 1.8rem;
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,19 @@
+.camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  
+  .webcam-feed {
+    width: 100%;
+    height: auto;
+  }
+  
+  .pose-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

@@ -1,0 +1,49 @@
+.audio-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .voice-select, .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .voice-select select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: white;
+  }
+  
+  .volume-control input[type="range"] {
+    width: 150px;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  .volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .volume-control input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
